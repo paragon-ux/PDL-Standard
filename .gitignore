@@ -1,0 +1,21 @@
+# Private design inputs and exported conversations
+inputs/
+
+# Local release tooling; not part of the published PDL project
+.agents/
+# Historical development copies retained outside the curated public tree
+confirm-with-pseudocode-hard-test-kit/
+docs/adr/
+docs/trd/
+docs/test-results/
+
+# Raw model transcripts remain in the external evidence archive
+tests/harness/test-results/
+
+# Local and generated files
+__pycache__/
+*.pyc
+*.zip
+.DS_Store
+Thumbs.db
+desktop.ini

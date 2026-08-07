@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate public bundle
+        run: python scripts/validate_bundle.py
+
+      - name: Verify frozen harness and links
+        run: python tests/harness/preflight.py
+
+      - name: Run harness infrastructure self-tests
+        run: python tests/harness/harness_selftest.py
