@@ -1,0 +1,2 @@
+# Preserve the exact tested bytes used by the published skill digest.
+confirm-with-pseudocode/agents/openai.yaml -text whitespace=cr-at-eol

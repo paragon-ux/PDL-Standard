@@ -56,8 +56,9 @@ current skill passed all 40 cases.
 
 ## Sanitizer review
 
-The final 44-file Git-visible release set was scanned without sanitizer ignore
-or suppression rules.
+The Git-visible release set now contains 45 files. The sanitizer results below
+cover the preceding 44-file set; rerun the sanitizer after this CI repair to
+make the scan final. No sanitizer ignore or suppression rules were used.
 
 | Check | Result |
 |---|---:|
