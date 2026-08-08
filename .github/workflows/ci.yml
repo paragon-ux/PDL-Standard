@@ -19,6 +19,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Verify runtime package manifest
+        run: python scripts/verify_runtime_manifest.py
+
+      - name: Self-test runtime manifest verifier
+        run: python scripts/verify_runtime_manifest.py --self-test
+
       - name: Validate public bundle
         run: python scripts/validate_bundle.py
 

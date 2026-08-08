@@ -13,10 +13,13 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLIC_ENTRIES = (
     ".github",
+    ".gitattributes",
     ".gitignore",
+    "INSTALLATION.md",
     "LICENSE",
     "NOTICE.md",
     "README.md",
+    "runtime-manifest.json",
     "confirm-with-pseudocode",
     "docs/architecture",
     "docs/evaluation",
@@ -26,9 +29,13 @@ PUBLIC_ENTRIES = (
 )
 REQUIRED_FILES = (
     ".github/workflows/ci.yml",
+    ".gitattributes",
     "README.md",
+    "INSTALLATION.md",
     "LICENSE",
     "NOTICE.md",
+    "runtime-manifest.json",
+    "scripts/verify_runtime_manifest.py",
     "confirm-with-pseudocode/SKILL.md",
     "confirm-with-pseudocode/agents/openai.yaml",
     "confirm-with-pseudocode/references/pdl-conventions.md",
@@ -38,6 +45,9 @@ REQUIRED_FILES = (
     "docs/evaluation/current-targeted-run.json",
     "docs/evaluation/results.md",
     "docs/architecture/pdl-rationale.md",
+    "docs/architecture/adr/0007-contract-governed-context-projected-runtime.md",
+    "docs/architecture/trd/README.md",
+    "docs/architecture/trd/0002-contract-substrate-and-mechanical-verification.md",
     "tests/harness/suite.lock.json",
 )
 TEXT_SUFFIXES = {"", ".json", ".jsonl", ".md", ".py", ".txt", ".yaml", ".yml"}
@@ -190,7 +200,7 @@ def main() -> int:
         return 1
     print("BUNDLE VALIDATION PASS")
     print(f"- public files checked: {len(files)}")
-    print("- required files and skill metadata present")
+    print("- required files, architecture docs, and skill metadata present")
     print("- no user-home or documented Windows absolute paths")
     print("- relative Markdown links resolve")
     print("- behavioral suite 1.1 lock present with 40 cases")

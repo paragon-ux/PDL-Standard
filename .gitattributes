@@ -1,2 +1,6 @@
-# Preserve the exact tested bytes used by the published skill digest.
+# Stabilize runtime-package bytes across platforms for manifest verification.
+confirm-with-pseudocode/SKILL.md text eol=lf
+confirm-with-pseudocode/references/*.md text eol=lf
+
+# Preserve the exact tested CRLF bytes used by the published agent metadata.
 confirm-with-pseudocode/agents/openai.yaml -text whitespace=cr-at-eol

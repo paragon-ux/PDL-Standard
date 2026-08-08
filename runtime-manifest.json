@@ -1,0 +1,52 @@
+{
+  "manifest_version": "1.0",
+  "package": {
+    "name": "confirm-with-pseudocode",
+    "source_repository": "https://github.com/paragon-ux/PDL-Standard",
+    "source_path": "confirm-with-pseudocode",
+    "installation_unit": "directory",
+    "recursive_copy_required": true,
+    "exact_file_set": true
+  },
+  "digest": {
+    "algorithm": "git_blob_sha1",
+    "description": "Git blob SHA-1 after the per-file digest_normalization rule; used only for package content identity."
+  },
+  "ignored_entries": [
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini",
+    "__pycache__",
+    "*.pyc"
+  ],
+  "required_directories": [
+    "agents",
+    "references"
+  ],
+  "files": [
+    {
+      "path": "SKILL.md",
+      "required": true,
+      "git_blob_sha1": "fff227b61924f4200a1528a72c09de36182324e5",
+      "digest_normalization": "crlf_to_lf"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "required": true,
+      "git_blob_sha1": "b19004b2d29f9be861b5a6dd0c98163cf31ba43f",
+      "digest_normalization": "none"
+    },
+    {
+      "path": "references/evaluation-cases.md",
+      "required": true,
+      "git_blob_sha1": "50eba711c8c2419e54466cbef26cdb5dc794ad26",
+      "digest_normalization": "crlf_to_lf"
+    },
+    {
+      "path": "references/pdl-conventions.md",
+      "required": true,
+      "git_blob_sha1": "a73c4c1c1335e27379d664bb06330edb52879476",
+      "digest_normalization": "crlf_to_lf"
+    }
+  ]
+}
